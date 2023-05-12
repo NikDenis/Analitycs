@@ -871,6 +871,28 @@ body {
     }
 
 
+    .plans-cart-wrp {
+        gap: 20px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    .plans-cart {
+        display: inline;
+        margin-bottom: 40px;
+        scroll-snap-align: center;
+    }
+    .plans-cart-wrp::-webkit-scrollbar {
+        height: 2px;
+        scroll-padding-right: 100px;
+
+    }
+    .plans-cart-wrp::-webkit-scrollbar-thumb {
+        background-color: #2A407C;
+        scroll-snap-align: center;
+    }
+
+
     .Authorization-content-wrp {
         flex-wrap: wrap;
         justify-content: center;
@@ -916,31 +938,7 @@ body {
 
 
 
-    .plans-cart-wrp {
-        gap: 20px;
-        overflow-x: scroll;
-        /* scroll-behavior: smooth; */
-        scroll-snap-type: x mandatory;
-    }
-    .plans-cart {
-        margin-bottom: 40px;
-        scroll-snap-align: center;
-    }
-    .plans-cart-wrp::-webkit-scrollbar {
-        height: 2px;
-        /* background-color: #2A407C; */
-        scroll-padding-right: 100px;
 
-    }
-    .plans-cart-wrp::-webkit-scrollbar-thumb {
-        background-color: #2A407C;
-        scroll-snap-align: center;
-    }
-    /* .plans-cart-wrp::
-    scroll-snap-align: center; */
-    .plans-cart {
-        display: inline;
-    }
     .plans-cart-btn-order {
         margin: 0 67px;
     }
