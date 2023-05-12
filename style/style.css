@@ -91,9 +91,6 @@ body {
     width: 100%;
 
 }
-.page-menu-nav {
-
-}
 .page-menu-list {
     width: 100%;
     display: flex;
@@ -122,9 +119,11 @@ body {
 }
 .link-sign-up:hover {
     background-color: #8794BA;
+    border: 1px solid rgb(211, 211, 211);
     transition: background-color 0.8s ease-out;
 }
 .link-sign-up:active {
+    border: 1px solid #465B95;
     background-color: inherit;
 }
 .page-menu-item-link:active,
@@ -152,22 +151,123 @@ body {
     border: 1px solid #465B95;
     border-radius: 68px;
 }
-.page-menu-gamburger {
+
+/* ---------------------- burger menu ------------------------ */
+
+.header-menu-burger-btn {
     height: 24px;
     max-width: 24px;
     width: 100%;
     display: none;
 }
-.page-menu-gamburger > svg {
+.header-burger-svg {
     fill: #8794BA;
     transition: fill 0.8s ease-in-out;
 }
-.page-menu-gamburger:hover > svg {
+.header-burger-svg:hover {
     fill: #FFF;
 }
-.page-menu-gamburger:active > svg {
+.header-burger-svg:active {
     fill: #8794BA;
 }
+
+#header-menu-switch {
+    display: none;
+  }
+  .menu-mobile-block-wrp {
+    display: none;
+    width: 50%;
+    min-height: 65%;
+    padding: 16px 33px;
+    box-sizing: border-box;
+    background-color:  #172755;
+    box-shadow: -15px -15px 15px #11234D;
+    right: 0px;
+    position: absolute;
+    top:75px;
+  }
+  .menu-list-close-btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20px;
+    left: 0;
+  }
+  .menu-list-close-btn::before,
+  .menu-list-close-btn::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #8794BA;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    transform: rotate(45deg);
+    transition: background-color 0.8s ease;
+  }
+  .menu-list-close-btn::after {
+    transform: rotate(-45deg)
+  }
+  .menu-list-close-btn:hover::before,
+  .menu-list-close-btn:hover::after {
+    background: #FFFFFF;
+  }
+  .menu-list-close-btn:active::before,
+  .menu-list-close-btn:active::after{
+    background: #8794BA;
+  }
+  .menu-list-title {
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    margin: 9px 0 24px 0;
+    font-weight: bold;
+    color: #FFF;
+    opacity: 0.8;
+    text-transform: uppercase;
+  }
+
+  .menu-mobile-list-item > a {
+    display: block;
+    font-size: 20px;
+    text-align:center; 
+    margin: 0 0 11px 0;
+    color: #8794BA;
+    transition: color 0.8s ease;
+  }
+  .menu-mobile-list-item:nth-child(3) {
+    text-transform: uppercase;
+  }
+  .menu-mobile-list-item:hover > a {
+    color: #FFFFFF;
+  }
+  .menu-mobile-list-item:active > a {
+    color: #9D2334;
+  }
+  .btn-reg{
+      display: block;
+      width: 230px;
+      height: 48px;
+      background-color: #1E2E5C;
+      border: 1px solid #465B95;
+      border-radius: 68px;
+      color:#8794BA;
+      margin: 0 auto;
+      transition: color 0.8s ease;
+      transition: background-color 0.8s ease;
+      cursor: pointer;
+  }
+  .btn-reg:hover {
+    background-color:#8794BA ;
+    color:#1E2E5C;
+  }
+
+/* ---------------------- burger menu ------------------------ */
+
 
 .page-header__monitoring-wrp {
     /* padding-left: calc(50% - 800px);
@@ -883,7 +983,7 @@ body {
         max-width: 90px;
         width: 100%;
     }
-    .page-menu-gamburger {
+    .header-menu-burger-btn {
         display: block;
     }
     .monitoring-img-wrp {
@@ -1192,5 +1292,11 @@ body {
         height: 24px;
    }
 }
+
+
+
+
+
+
 
 

@@ -1,4 +1,20 @@
 
+
+const closeBtn = document.querySelector('.menu-list-close-btn');
+const menuMobile = document.querySelector('.menu-mobile-block-wrp');
+const span = document.querySelector('.header-burger-svg');
+closeBtn.addEventListener('click', () => {
+    menuMobile.style.display = 'none';
+})
+
+span.addEventListener('click', () => {
+    menuMobile.style.display = 'flex';
+    menuMobile.style.flexDirection = 'column';
+    menuMobile.style.gap = '20px'
+})
+
+
+
 const autorizationInput = document.querySelectorAll('.Authorization-block-input');
 const form = document.querySelector('.Authorization-block-form');
 
