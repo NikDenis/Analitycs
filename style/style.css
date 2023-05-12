@@ -440,11 +440,13 @@ body {
     opacity: 0.7;
     box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
     border-radius: 30px;
+    transition: background-color 0.8 ease-in-out;
 }
 
-.plans-cart-color {
+.plans-cart:hover {
     background-color: #FFFFFF;
     opacity: 1;
+    transition: background-color 0.8s ease-out;
 }
 .plans-cart-title {
     margin-bottom: 10px;
@@ -454,8 +456,9 @@ body {
     text-align: center;
     color: #FFFFFF;
 }
-.cart-title-color {
+.plans-cart:hover .plans-cart-title {
     color: #172755;
+    transition: color 0.8s ease-in-out;
 }
 .plans-cart-text {
     margin: 0 auto 37px;
@@ -474,8 +477,9 @@ body {
     color: #FFFFFF;
 }
 
-.cart-price-color {
+.plans-cart:hover .plans-cart-price {
     color: #172755;
+    transition: color 0.8s ease-in-out;
 }
 
 .plans-cart-price-span {
@@ -502,9 +506,14 @@ body {
     color: #FFFFFF;
     cursor: pointer;
 }
-.cart-btn-color {
+.plans-cart:hover .plans-cart-btn-order {
     background: #EF2A82;
     border: none;
+    transition: background-color 0.8s ease-in-out;
+}
+.plans-cart:hover .plans-cart-btn-order:hover {
+    background-color: #0F1F4B;
+    transition: background-color 0.8s ease-in-out;
 }
 
 .span-lin {
@@ -808,7 +817,7 @@ body {
 }
 .page-footer_network-item {}
 .icons-social_network-link {
-
+    
 }
 .icons-social_network-link > svg {
     fill: #8794BA;
@@ -824,6 +833,32 @@ body {
 
 @media (max-width: 1024px) {
 
+
+    .plans-cart-wrp {
+        gap: 20px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    .plans-cart {
+        margin-bottom: 40px;
+        scroll-snap-align: center;
+    }
+    .plans-cart-wrp::-webkit-scrollbar {
+        height: 2px;
+        scroll-padding-right: 100px;
+
+    }
+    .plans-cart-wrp::-webkit-scrollbar-thumb {
+        background-color: #2A407C;
+        scroll-snap-align: center;
+    }
+    .plans-cart {
+        display: inline;
+    }
+    .plans-cart-btn-order {
+        margin: 0 67px;
+    }
 
 
 }
@@ -871,26 +906,6 @@ body {
     }
 
 
-    .plans-cart-wrp {
-        gap: 20px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-    }
-    .plans-cart {
-        display: inline;
-        margin-bottom: 40px;
-        scroll-snap-align: center;
-    }
-    .plans-cart-wrp::-webkit-scrollbar {
-        height: 2px;
-        scroll-padding-right: 100px;
-
-    }
-    .plans-cart-wrp::-webkit-scrollbar-thumb {
-        background-color: #2A407C;
-        scroll-snap-align: center;
-    }
 
 
     .Authorization-content-wrp {
@@ -939,9 +954,6 @@ body {
 
 
 
-    .plans-cart-btn-order {
-        margin: 0 67px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -992,7 +1004,7 @@ body {
     }
 
 
-
+    
     .page-footer-menu {
         display: none;
     }
@@ -1180,3 +1192,5 @@ body {
         height: 24px;
    }
 }
+
+
