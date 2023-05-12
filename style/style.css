@@ -808,7 +808,7 @@ body {
 }
 .page-footer_network-item {}
 .icons-social_network-link {
-    
+
 }
 .icons-social_network-link > svg {
     fill: #8794BA;
@@ -992,7 +992,7 @@ body {
     }
 
 
-    
+
     .page-footer-menu {
         display: none;
     }
@@ -1180,5 +1180,3 @@ body {
         height: 24px;
    }
 }
-
-
