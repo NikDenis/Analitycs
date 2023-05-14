@@ -38,3 +38,11 @@ form.addEventListener('input', (event) => {
     }
   })
 })
+
+
+
+const mediaMobile = window.matchMedia("(max-width: 600px)");
+const monitoringTxt = document.querySelector('.monitoring-txt');
+if (mediaMobile.matches) {
+    monitoringTxt.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est.";
+}

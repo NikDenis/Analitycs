@@ -22,7 +22,6 @@ body {
 
 /* ---------------------- header ------------------------ */
 .page-header-wrp {
-    position: relative;
     margin-bottom: 38px;
     min-height: 815px;
     width: 100%;
@@ -173,8 +172,8 @@ body {
 
 #header-menu-switch {
     display: none;
-  }
-  .menu-mobile-block-wrp {
+}
+.menu-mobile-block-wrp {
     display: none;
     width: 50%;
     min-height: 65%;
@@ -185,8 +184,9 @@ body {
     right: 0px;
     position: absolute;
     top:75px;
-  }
-  .menu-list-close-btn {
+    z-index: 1;
+}
+.menu-list-close-btn {
     display: block;
     width: 24px;
     height: 24px;
@@ -195,9 +195,9 @@ body {
     position: relative;
     top: 20px;
     left: 0;
-  }
-  .menu-list-close-btn::before,
-  .menu-list-close-btn::after {
+}
+.menu-list-close-btn::before,
+.menu-list-close-btn::after {
     content: "";
     display: block;
     width: 24px;
@@ -208,19 +208,19 @@ body {
     top: 10px;
     transform: rotate(45deg);
     transition: background-color 0.8s ease;
-  }
-  .menu-list-close-btn::after {
+}
+.menu-list-close-btn::after {
     transform: rotate(-45deg)
-  }
-  .menu-list-close-btn:hover::before,
-  .menu-list-close-btn:hover::after {
+}
+.menu-list-close-btn:hover::before,
+.menu-list-close-btn:hover::after {
     background: #FFFFFF;
-  }
-  .menu-list-close-btn:active::before,
-  .menu-list-close-btn:active::after{
+}
+.menu-list-close-btn:active::before,
+.menu-list-close-btn:active::after{
     background: #8794BA;
-  }
-  .menu-list-title {
+}
+.menu-list-title {
     text-align: center;
     display: block;
     font-size: 24px;
@@ -229,47 +229,47 @@ body {
     color: #FFF;
     opacity: 0.8;
     text-transform: uppercase;
-  }
-
-  .menu-mobile-list-item > a {
+}
+.menu-mobile-list-item > a {
     display: block;
     font-size: 20px;
     text-align:center; 
     margin: 0 0 11px 0;
     color: #8794BA;
     transition: color 0.8s ease;
-  }
-  .menu-mobile-list-item:nth-child(3) {
+}
+.menu-mobile-list-item:nth-child(3) {
     text-transform: uppercase;
-  }
-  .menu-mobile-list-item:hover > a {
+}
+.menu-mobile-list-item:hover > a {
     color: #FFFFFF;
-  }
-  .menu-mobile-list-item:active > a {
+}
+.menu-mobile-list-item:active > a {
     color: #9D2334;
-  }
-  .btn-reg{
-      display: block;
-      width: 230px;
-      height: 48px;
-      background-color: #1E2E5C;
-      border: 1px solid #465B95;
-      border-radius: 68px;
-      color:#8794BA;
-      margin: 0 auto;
-      transition: color 0.8s ease;
-      transition: background-color 0.8s ease;
-      cursor: pointer;
-  }
-  .btn-reg:hover {
+}
+.btn-reg{
+    display: block;
+    width: 230px;
+    height: 48px;
+    background-color: #1E2E5C;
+    border: 1px solid #465B95;
+    border-radius: 68px;
+    color:#8794BA;
+    margin: 0 auto;
+    transition: color 0.8s ease;
+    transition: background-color 0.8s ease;
+    cursor: pointer;
+}
+.btn-reg:hover {
     background-color:#8794BA ;
     color:#1E2E5C;
-  }
+}
 
 /* ---------------------- burger menu ------------------------ */
 
 
 .page-header__monitoring-wrp {
+    position: relative;
     /* padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px); */
     display: flex;
@@ -338,8 +338,8 @@ body {
     height: 555px;
     max-width: 873px;
     width: 100%;
-    left: 780px;
-    top: 164px;
+    left: 628px;
+    top: -3px;
     box-shadow: 74px 18px 50px -15px rgba(25, 42, 89, 0.2);
 }
 
@@ -718,6 +718,19 @@ body {
     padding: 32px 0;
     max-width: 428px;
     width: 100%;
+    position: relative;
+}
+.Authorization-block::before {
+    content: "";
+    display: block;
+    width: 480px;
+    height: 480px;
+    background-color: #F9F0FF;
+    border-radius: 3px;
+    position: absolute;
+    top: 42px;
+    left: calc(50% - 240px);
+    z-index: -1;
 }
 .Authorization-block-title {
     margin-bottom: 16px;
@@ -932,8 +945,20 @@ body {
 
 
 @media (max-width: 1024px) {
+    .center {
+        max-width: 900px;
+    }
 
-
+    .content__automated_reports-image-wrp,
+    .content__fully__customizable-image-wrp,
+    .content__prebuilt__templates-image-wrp {
+        height: 330px;
+    }
+    .content__automated_reports,
+    .content__fully__customizable,
+    .content__prebuilt__templates {
+        align-items: center;
+    }
     .plans-cart-wrp {
         gap: 20px;
         overflow-x: scroll;
@@ -963,6 +988,9 @@ body {
 
 }
 @media (max-width: 900px) {
+    .center {
+        max-width: 767px;
+    }
     .page-header-block-wrp {
         box-shadow: 0px 4px 4px #12214D;
         padding: 20px 0;
@@ -985,7 +1013,6 @@ body {
     }
     .header-menu-burger-btn {
         display: block;
-        margin-right: 5px;
     }
     .monitoring-img-wrp {
         display: none;
@@ -1017,6 +1044,9 @@ body {
 }
 
 @media (max-width: 767px) {
+    .center {
+        max-width: 600px;
+    }
     .page-header-wrp {
         margin-bottom: 50px;
     }
@@ -1028,6 +1058,7 @@ body {
     }
     .page-header-logo a svg {
         height: 30px;
+        max-width: 138px;
     }
     .monitoring-img-wrp {
         display: none;
@@ -1064,6 +1095,7 @@ body {
     .page-header__monitoring {
         margin: 0;
         max-width: 335px;
+        min-height: 246px;
     }
     .header-menu-burger-btn {
         margin: 0;
@@ -1106,7 +1138,9 @@ body {
     .Authorization-content {
         display: none;
     }
-
+    .Authorization-block::before {
+        display: none;
+    }
 
     
     .page-footer-menu {
@@ -1115,21 +1149,12 @@ body {
 }
 
 @media (max-width: 400px) {
-    .content__automated_reports-image-wrp,
-    .content__fully__customizable-image-wrp,
-    .content__prebuilt__templates-image-wrp {
-        height: 340px;
-    }
-}
-
-
-
-@media (max-width: 375px) {
     .center {
-        max-width: 375px;
+        max-width: 335px;
         width: 100%;
         margin: 0 auto;
     }
+
     .main-content-features {
         margin-bottom: 71px;
     }
@@ -1158,6 +1183,21 @@ body {
         text-align: left;
 
     }
+
+
+
+    .content__automated_reports-image-wrp,
+    .content__fully__customizable-image-wrp,
+    .content__prebuilt__templates-image-wrp {
+        height: 340px;
+    }
+}
+
+
+
+@media (max-width: 375px) {
+
+
 
     .content__automated_reports,
     .content__fully__customizable,
