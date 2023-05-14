@@ -41,8 +41,15 @@ form.addEventListener('input', (event) => {
 
 
 
-const mediaMobile = window.matchMedia("(max-width: 600px)");
+const mediaMobile600 = window.matchMedia("(max-width: 600px)");
+const mediaMobile400 = window.matchMedia("(max-width: 400px)");
+
 const monitoringTxt = document.querySelector('.monitoring-txt');
-if (mediaMobile.matches) {
+if (mediaMobile600.matches) {
     monitoringTxt.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est.";
+}
+
+const authorizationBlock = document.querySelector('.Authorization');
+if (mediaMobile400.matches) {
+    authorizationBlock.classList.remove('center');
 }
