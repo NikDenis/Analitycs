@@ -26,7 +26,7 @@ body {
     min-height: 815px;
     width: 100%;
     background-image: url(../img/background-top.png);
-    background-position: left;
+    background-position: unset;
     background-size: cover;
     overflow-x: hidden;
 }
@@ -501,7 +501,7 @@ body {
     background-image: url(../img/background-bottom.png);
     min-height: 1069px;
     width: 100%;
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 .pricing-plans-wrp {
@@ -1238,17 +1238,6 @@ body {
         height: 173px;
     }
 
-
-}
-
-
-
-@media (max-width: 375px) {
-
-
-
-    
-
     .pricing-plans {
         min-height: 857px;
     }
@@ -1273,41 +1262,57 @@ body {
         max-width: 335x;
         width: 100%;
    }
-   .plans-cart {
+
+    .plans-cart {
         max-width: 280px;
         width: 100%;
         padding: 35px 0 47px;
-   }
-   .plans-cart-title {
+    }
+    .plans-cart-title {
         font-size: 25px;
         line-height: 29px;
         margin-bottom: 7px;
-   }
-   .plans-cart-text {
+    }
+    .plans-cart-text {
         font-size: 13px;
         line-height: 18px;
         margin-bottom: 30px;
-   }
-   .span-lin {
+    }
+    .span-lin {
         margin-bottom: 20px;
-   }
-   .plans-cart-price {
+    }
+    .plans-cart-price {
         font-size: 60px;
         line-height: 70px;
-   }
-   .plans-cart-price-span {
+    }
+    .plans-cart-price-span {
         font-size: 30px;
         line-height: 35px;
-   }
-   .plans-cart-month {
+    }
+    .plans-cart-month {
         font-size: 13px;
         line-height: 18px;
         margin-bottom: 36px;
-   }
-   .plans-cart-btn-order {
-    padding: 15.5px 83px;
-    margin: 0 37px;
-   }
+    }
+    .plans-cart-btn-order {
+        padding: 15.5px 83px;
+        margin: 0 37px;
+    }
+    
+
+
+}
+
+
+
+@media (max-width: 375px) {
+
+
+
+    
+
+
+
 
 
    .Authorization {
@@ -1340,6 +1345,23 @@ body {
    }
 }
 
+@media (hover: none) {
+    .plans-cart {
+        background-color: #FFFFFF;
+        opacity: 1;
+    }
+    .plans-cart-title {
+        color: #172755;
+    }
+    .plans-cart-price {
+        color: #172755;
+    }
+    .plans-cart-btn-order {
+        background-color: #EF2A82;
+        border: navajowhite;
+    }
+
+}
 
 
 

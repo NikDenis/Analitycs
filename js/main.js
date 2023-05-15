@@ -40,7 +40,7 @@ form.addEventListener('input', (event) => {
 })
 
 
-
+const plansCardWrp = document.querySelector('.plans-cart-wrp');
 const mediaMobile600 = window.matchMedia("(max-width: 600px)");
 const mediaMobile400 = window.matchMedia("(max-width: 400px)");
 
@@ -51,5 +51,6 @@ if (mediaMobile600.matches) {
 
 const authorizationBlock = document.querySelector('.Authorization');
 if (mediaMobile400.matches) {
+    plansCardWrp.classList.remove('center');
     authorizationBlock.classList.remove('center');
 }
